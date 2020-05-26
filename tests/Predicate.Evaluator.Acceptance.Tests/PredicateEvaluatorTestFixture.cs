@@ -76,7 +76,7 @@ namespace Predicate.Evaluator.Acceptance.Tests
             }, index);
 
             Task.Delay(1000).GetAwaiter().GetResult();
-            Evaluator = new ElasticSearchPredicateEvaluator();
+            Evaluator = new ElasticSearchPredicateEvaluator(client, index, new PropertyDetailsProvider());
         }
 
         public void Dispose()
