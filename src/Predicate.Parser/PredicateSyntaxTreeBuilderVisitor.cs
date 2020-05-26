@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using Antlr4.Runtime.Tree;
 using Predicate.Parser.Symbols;
 
+[assembly: InternalsVisibleTo("Predicate.Evaluator")]
 namespace Predicate.Parser
 {
     internal class PredicateSyntaxTreeBuilderVisitor : PredicateBaseVisitor<PredicateNode>
